@@ -11,11 +11,11 @@ typedef union
 	unsigned short		m128_u16[8];
 	signed short		m128_i16[8];
 
-	unsigned long		m128_u32[4];
-	signed long			m128_i32[4];
+	unsigned int		m128_u32[4];
+	signed int		m128_i32[4];
 
-	unsigned long long	m128_u64[2];
-	signed long long	m128_i64[2];
+	unsigned long	m128_u64[2];
+	signed long	m128_i64[2];
 } intVec;
 
 typedef union
@@ -71,27 +71,27 @@ void print_int_vector(__m128i a, unsigned char type)
 		case '5':
 			{
 				for (int i=3; i>0; i--)
-					printf ("%lu, ", tmp.m128_u32[i]);
-				printf ("%lu]\n\n", tmp.m128_u32[0]);
+					printf ("%X, ", tmp.m128_u32[i]);
+				printf ("%X]\n\n", tmp.m128_u32[0]);
 			}
 			break;
 		case '6':
 			{
 				for (int i=3; i>0; i--)
-					printf ("%ld, ", tmp.m128_i32[i]);
-				printf ("%ld]\n\n", tmp.m128_i32[0]);
+					printf ("%d, ", tmp.m128_i32[i]);
+				printf ("%d]\n\n", tmp.m128_i32[0]);
 			}
 			break;
 		case '7':
 			{
-				printf ("%llu, ", tmp.m128_u64[1]);
-				printf ("%llu]\n\n", tmp.m128_u64[0]);
+				printf ("%lX, ", tmp.m128_u64[1]);
+				printf ("%lX]\n\n", tmp.m128_u64[0]);
 			}
 			break;
 		case '8':
 			{
-				printf ("%lld, ", tmp.m128_i64[1]);
-				printf ("%lld]\n\n", tmp.m128_i64[0]);
+				printf ("%ld, ", tmp.m128_i64[1]);
+				printf ("%ld]\n\n", tmp.m128_i64[0]);
 			}
 			break;
 	}
