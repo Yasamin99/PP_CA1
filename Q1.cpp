@@ -82,7 +82,7 @@ int main(void)
 		AVX2   = (info[1] & ((int)1 <<  5)) != 0;
 		SHA    = (info[1] & ((int)1 << 29)) != 0;
 	}
-
+	cout << "810196512 - 810196469" << endl;
 	cout << "CPU vendor = " << vendor << endl;
     cout << "CPU Brand = " << model << endl;
     cout << "Number of cores = " << cores << endl;
